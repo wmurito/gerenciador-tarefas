@@ -19,10 +19,11 @@ TAREFAS = [
         "descrição": "estão sujas",
         "estado": "não finalizado",
     },
-
 ]
 
 app = FastAPI()
+
+
 @app.get("/tarefas")
 def listar():
     return TAREFAS
