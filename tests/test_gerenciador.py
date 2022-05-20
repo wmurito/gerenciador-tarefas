@@ -160,7 +160,7 @@ def test_quando_criar_uma_tarefa_esta_deve_ser_persistida():
     TAREFAS.clear()
 
 
-def test_quando_deletar_uma_tarefa_deve_retornar_codigo_de_status_204():
+def test_quando_deletar_uma_tarefa_quando_retornar_codigo_de_status_204():
     cliente = TestClient(app)
     tarefa = {"titulo": "titulo", "descricao": "descricao"}
     resposta = cliente.post("/tarefas", json=tarefa)
@@ -169,7 +169,7 @@ def test_quando_deletar_uma_tarefa_deve_retornar_codigo_de_status_204():
     TAREFAS.clear()
 
 
-def test_quando_deletar_uma_tarefa_deve_ser_removida():
+def test_quando_deletar_uma_tarefa_que_deve_ser_removida():
     cliente = TestClient(app)
     tarefa = {"titulo": "titulo", "descricao": "descricao"}
     resposta = cliente.post("/tarefas", json=tarefa)
@@ -178,7 +178,7 @@ def test_quando_deletar_uma_tarefa_deve_ser_removida():
     TAREFAS.clear()
 
 
-def test_quando_alterar_estado_de_uma_tarefa_deve_retornar__status_404():
+def test_quando_alterar_uma_tarefa_quando_retornar_status_404():
     cliente = TestClient(app)
     tarefa = {"titulo": "titulo", "descricao": "descricao"}
     resposta = cliente.post("/tarefas", json=tarefa)
