@@ -50,10 +50,10 @@ def detalhar(id: UUID):
 
 @app.put("/tarefas/{id}", response_model=Tarefa)
 def atualizar(id: UUID, tarefa: TarefaEntrada):
-    for tarefa_atual in TAREFAS:
-        if tarefa_atual["id"] == id:
-            tarefa_atual.update(tarefa.dict())
-            return tarefa_atual
+    for tarefa in TAREFAS:
+        if tarefa ["id"] == id:
+            tarefa.update(tarefa.dict())
+            return tarefa 
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
 
 
@@ -63,4 +63,4 @@ def deletar(id: UUID):
         if tarefa["id"] == id:
             TAREFAS.remove(tarefa)
             return tarefa
-    return {"erro": "Tarefa não encontrada"}
+    return {"erro": "Tarefa inexistente"}
