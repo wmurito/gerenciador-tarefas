@@ -71,8 +71,8 @@ def test_quando_listar_tarefas_a_tarefa_retornada_deve_possuir_um_estado():
     TAREFAS.append(
         {
             "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-            "titulo": "titulo 1",
-            "descricao": "descricao 1",
+            "titulo": "Lavar louça",
+            "descricao": "Lavar louça",
             "estado": "finalizado",
         }
     )
