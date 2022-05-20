@@ -169,7 +169,7 @@ def test_quando_deletar_uma_tarefa_deve_retornar_codigo_de_status_204():
     TAREFAS.clear()
 
 
-def test_quando_deletar_uma_tarefa_esta_deve_ser_removida():
+def test_quando_deletar_uma_tarefa_deve_ser_removida():
     cliente = TestClient(app)
     tarefa = {"titulo": "titulo", "descricao": "descricao"}
     resposta = cliente.post("/tarefas", json=tarefa)
