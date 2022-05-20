@@ -51,9 +51,9 @@ def detalhar(id: UUID):
 @app.put("/tarefas/{id}", response_model=Tarefa)
 def atualizar(id: UUID, tarefa: TarefaEntrada):
     for tarefa in TAREFAS:
-        if tarefa ["id"] == id:
+        if tarefa["id"] == id:
             tarefa.update(tarefa.dict())
-            return tarefa 
+            return tarefa
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
 
 
